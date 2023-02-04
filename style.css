@@ -14,7 +14,7 @@
     box-sizing: border-box;
     outline: none; border: none;
     text-transform: capitalize;
-    /* transition: all .2s ease-out; */
+    transition: all .2s ease-out;
     text-decoration: none;
 }
 html{
@@ -54,6 +54,24 @@ section{
     margin-top: 1rem;
     border: var(--border);
     border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.btn::before{
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+height: 100%;
+width: 0%;
+background-color: var(--green);
+transition: .5s linear;
+}
+.btn:hover::before{
+    width: 100%;
+    z-index: -1;
+    left: 0;
 }
 .btn span{
     background-color: var(--green);
@@ -65,12 +83,11 @@ section{
 }
 .btn:hover{
     color: #fff;
-    background-color: var(--green);
 }
 .btn:hover span{
-    color: var(--green);
     background-color: #fff;
     margin-left: 1rem;
+    color: var(--green);
 }
 
 section:nth-child(even){
@@ -107,27 +124,29 @@ section:nth-child(even){
 }
 .header .navbar a::before,
 .header .navbar a::after{
-    content: " ";
+    content: '';
     position: absolute;
+    background-color: var(--green);
     height: .2rem;
     width: 0%;
-    background: var(--green);
-    transition: .5s;
+    transition: .3s linear;
 }
 .header .navbar a::after{
-    left: 0;
-    bottom: -.6rem; 
+    right: 0rem;
+    bottom: -.5rem;
 }
 .header .navbar a::before{
-    right: 0;
+    left: 0;
     top: -.5rem;
-} 
-.header .navbar a:hover:after,
-.header .navbar a:hover:before{
-    width: 100%;
 }
 .header .navbar a:hover{
     color: var(--green);
+}
+.header .navbar a:hover::after{
+    width: 100%;
+}
+.header .navbar a:hover::before{
+    width: 100%;
 }
 #menu-bar{
     font-size: 2.5rem;
@@ -526,9 +545,23 @@ padding: 1rem 4rem;
     top: calc(100% - 12rem);
 }
 
-
-
-
+/* loader section */
+.loader-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+.loader-container.fade-out{
+    top: -120%;
+}
 
 
 

@@ -17,3 +17,11 @@ window.onscroll = () =>{
       document.querySelector('#scroll-top').classList.remove('active');
     }
   }
+
+  function loader(){
+    document.querySelector('.loader-container').classList.add('fade-out')
+  }
+  function fadeout(){
+    setInterval(loader, 3000)
+  }
+  window.onload = fadeout();
