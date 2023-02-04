@@ -14,7 +14,7 @@
     box-sizing: border-box;
     outline: none; border: none;
     text-transform: capitalize;
-    transition: all .2s ease-out;
+    /* transition: all .2s ease-out; */
     text-decoration: none;
 }
 html{
@@ -173,14 +173,14 @@ section:nth-child(even){
 
 /* icon container start */
 .icon-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1.5rem;
     padding: 5rem 8rem;
     background: #fff;
 }
 .icon-container .icons{
-    flex: 1 1 20rem;
+
     border: var(--border);
     text-align: center;
     padding: 2.5rem;
@@ -207,12 +207,11 @@ section:nth-child(even){
 
 /* service section start */
 .service .box-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     gap: 1.5rem;
 }
 .service .box-container .box{
-    flex: 1 1 40rem;
     border: var(--border);
     box-shadow: var(--box-shawdow);
     padding: 2.5rem;
@@ -270,12 +269,11 @@ section:nth-child(even){
 
 /* doctor section start */
 .doctor .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 1.5rem;
 }
 .doctor .box-container .box{
-    flex: 1 1 40rem;
     border: var(--border);
     padding: 2rem;
     text-align: center;
@@ -361,12 +359,11 @@ padding: 1rem 4rem;
 
 /* review section start */
 .review .box-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 1.5rem;
 }
 .review .box-container .box{
-    flex: 1 1 40rem;
     border: var(--border);
     text-align: center;
     overflow: hidden;
@@ -397,7 +394,6 @@ padding: 1rem 4rem;
     color: var(--ligtcolor);
     font-size: 1.6rem;
     padding-top: 4rem;
-    /* line-height: 0rem; */
 }
 .review .box-container .box::before{
     content: " ";
@@ -418,12 +414,11 @@ padding: 1rem 4rem;
     background-color: #fff;
 }
 .blog .box-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     gap: 1.5rem;
 }
 .blog .box-container .box{
-    flex: 1 1 40rem;
     border: var(--border);
     border-radius: .5rem;
     padding: 2rem;
@@ -477,12 +472,9 @@ padding: 1rem 4rem;
 /* footer section start */
 
 .footer .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.footer .box-container .box{
-    flex: 1 1 30rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem
 }
 .footer .box-container .box h3{
     font-size: 2.5rem;
