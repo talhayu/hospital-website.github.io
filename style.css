@@ -546,7 +546,7 @@ padding: 1rem 4rem;
 }
 
 /* loader section */
-/* .loader-container{
+ .loader-container{
     position: fixed;
     top: 0;
     left: 0;
@@ -559,33 +559,11 @@ padding: 1rem 4rem;
     height: 100vh;
     background-color: #fff;
 }
-.loader-container.fade-out{
+.loader-container .fade-out{
     top: -120%;
-} */
+} 
 
-.loader{
-    border: 1rem solid grey;
-    border-radius: 50%;
-    height: 20rem;
-    width: 20rem;
-    border-top: 1rem solid blue;
-    animation: spin 2s linear infinite;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@keyframes spin {
-    0%{
-        transform: rotate(0deg);
-    }    
-    100%{
-        transform: rotate(360deg);
-    }
-}
+
 
 
 
